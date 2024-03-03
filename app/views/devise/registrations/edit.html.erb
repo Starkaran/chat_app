@@ -1,0 +1,62 @@
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+
+                <h2 class="title is-2">Edit <%= resource_name.to_s.humanize %></h2>
+                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                <%= f.error_notification %>
+
+                <div class="form-group">
+                    <%= f.label :name, class: "label" %>
+                    <div class="control">
+                        <%= f.input_field :name, required: true, autofocus: true, class: "form-control" %>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <%= f.label :email, class: "label" %>
+                    <div class="control">
+                        <%= f.input_field :email, required: true, class: "form-control" %>
+                    </div>
+                </div>
+
+                <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <div class="form-group">
+                    <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+                </div>
+                <% end %>
+
+                <div class="form-group">
+                    <%= f.label :password, class: "label" %>
+                    <div class="control">
+                        <%= f.input_field :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false, class: "form-control" %>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <%= f.label :password_confirmation, class: "label" %>
+                    <div class="control">
+                        <%= f.input_field :password_confirmation, required: false, class: "form-control" %>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <%= f.label :current_password, class: "label" %>
+                    <div class="control">
+                        <%= f.input_field :current_password, hint: "we need your current password to confirm your changes", required: true, class: "form-control" %>
+                    </div>
+                </div>
+
+                <%= f.button :submit, "Update", class:"btn btn-warning btn-block" %>
+
+                <% end %>
+
+                <hr />
+                <h3 class="title is-5">Cancel my account</h3>
+                <p>Unhappy? <%= link_to "Cancel my account", cancel_user_registration_path, data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
+
+            </div>
+        </div>
+    </div>
+</section>
