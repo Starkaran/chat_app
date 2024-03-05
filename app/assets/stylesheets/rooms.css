@@ -1,0 +1,87 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chat-room {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.chat-room .navbar {
+  position: absolute;
+  top: 0;
+  padding: 5px;
+  width: calc(70% - 30px);
+  border-bottom: 1px solid #eeeeee;
+}
+
+.chat-room .chat-box {
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  width: calc(70% - 30px);
+  margin-left: -15px;
+  background-color: #fff;
+  border-top: 1px solid #eeeeee;
+}
+
+.chat-room .chat-box input[type="text"] {
+  height: 45px;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.chat-room .chat-box .btn {
+  height: 45px;
+}
+
+.card.no-outline {
+  border: none;
+  box-shadow: none;
+}
+
+.room-link {
+  text-decoration: none;
+  color: #000;
+  align-items: center;
+}
+
+.room-link .room-card {
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+.room-link .room-card:hover {
+  background-color: #eeeeee;
+}
+
+.room-link .room-card.active {
+  background-color: black;
+}
+
+.room-link .room-card.active .name {
+  color: white;
+}
+
+.room-link .room-card.active .member-count {
+  color: #e0e0e0;
+}
+
+.room-link .room-card .name {
+  font-weight: bold;
+  color: #000;
+}
+
+.room-link .room-card .member-count {
+  color: #777777;
+  font-weight: lighter;
+}
+
+.rooms-sidebar {
+  border-right: 1px solid #eeeeee;
+}

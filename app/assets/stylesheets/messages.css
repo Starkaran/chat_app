@@ -1,0 +1,37 @@
+.message-box {
+  display: flex;
+}
+
+.message-box .btn {
+  margin-left: 8px;
+}
+
+.message {
+  background-color: #fff;
+  min-height: 59px;
+}
+
+.message .content-container {
+  display: inline-block;
+}
+
+.message .content-container .message-content {
+  background-color: #eeeeee;
+  padding: 4px 16px;
+  border-radius: 20px;
+}
+
+.message .content-container .author {
+  font-size: 0.8rem;
+  color: #999;
+  margin-left: 10px;
+}
+
+.message.me .content-container {
+  float: right;
+}
+
+.message.me .content-container .message-content {
+  background-color: #007bff;
+  color: #fff;
+}
